@@ -30,7 +30,7 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
             name="avatar"
             id="avatar"
             placeholder="Ссылка на фото"
-            required=""
+            required
             ref={avatarRef}
           />
           <span className="popup__input-error" id="avatar-error" />

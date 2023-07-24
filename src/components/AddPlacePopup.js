@@ -35,7 +35,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         placeholder="Название"
         minLength={2}
         maxLength={30}
-        required=""
+        required
         ref={titleRef}
       />
       <span className="popup__input-error" id="object-error" />
@@ -45,7 +45,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         name="link"
         id="link"
         placeholder="Ссылка на картинку"
-        required=""
+        required
         ref={linkRef}
       />
       <span className="popup__input-error" id="link-error" />

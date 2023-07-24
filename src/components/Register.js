@@ -1,22 +1,13 @@
-import { useState, useCallback } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Register({ onRegister }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const history = useHistory()
-
-  const resetForm = useCallback(() => {
-    setEmail('');
-    setPassword('');
-  }, [])
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    history.push('/sign-in')
     onRegister({ email, password })
-      .then(resetForm)
-      .then(() => history.push('/sign-in'))
   }
 
   return (
